@@ -1,0 +1,3 @@
+baseURL = 'https://blog.dobron.sk'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
