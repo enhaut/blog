@@ -1,0 +1,23 @@
+<footer class="footer">
+  <div class="footer__inner">
+      <div class="copyright">
+        <span>
+          © {{ now.Year }} 
+          {{ if $.Site.Params.author }}
+            <a href="https://www.linkedin.com/in/samuel-dobron/" target="_blank">{{ $.Site.Params.author }}</a>
+          {{ end }}
+        </span>
+        <span>
+          :: Powered by <a href="https://gohugo.io">Hugo</a></span>
+        <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a>
+      </span>
+      </div>
+  </div>
+</footer>
+
+{{ $menu := resources.Get "js/menu.js" | js.Build }}
+{{ $cp := resources.Get "js/code.js" | js.Build }}
+
+{{ $bundle := slice $menu $cp | resources.Concat "bundle.js" | resources.Minify }}
+
+<script type="text/javascript" src="{{ $bundle.RelPermalink }}"></script>
