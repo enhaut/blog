@@ -5,6 +5,8 @@ theme = 'hugo-theme-terminal'
 
 pagination.pagerSize = 5
 
+enableRobotsTXT = true
+
 # Required for Chroma and the custom syntax highlighting.
 [markup.highlight]
   noClasses = false
