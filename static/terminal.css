@@ -3,3 +3,8 @@
   --foreground: #eceae5;
   --accent: #d1b764;
 }
+
+/* Fix footer span spacing - theme only adds margin to first span, causing uneven spacing */
+.footer .copyright > *:not(:last-child) {
+  margin-right: 10px;
+}
