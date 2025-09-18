@@ -21,3 +21,6 @@
 {{ $bundle := slice $menu $cp | resources.Concat "bundle.js" | resources.Minify }}
 
 <script type="text/javascript" src="{{ $bundle.RelPermalink }}"></script>
+
+<!-- 100% privacy-first analytics -->
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
