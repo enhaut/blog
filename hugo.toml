@@ -50,3 +50,5 @@ enableRobotsTXT = true
   # whether to show a page's estimated reading time
   readingTime = true # default
 
+  # text to show in read more link
+  readMore = "..."
