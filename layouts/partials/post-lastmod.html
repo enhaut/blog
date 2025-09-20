@@ -1,0 +1,13 @@
+{{- $date := .Lastmod -}}
+{{- $pubDate := .Date -}}
+{{- if ne ($date.Format "2006-01-02") ($pubDate.Format "2006-01-02") -}}
+  {{- with .Params.dateFormat -}}
+    &nbsp;[{{- or $.Site.Params.updatedDatePrefix "Updated: " }} {{ $date | time.Format . -}}]
+  {{- else -}}
+    {{- with .Site.Params.dateFormat -}}
+      &nbsp;[{{- or $.Site.Params.updatedDatePrefix "Updated: " }} {{ $date | time.Format . -}}]
+    {{- else -}}
+      &nbsp;[{{- or $.Site.Params.updatedDatePrefix "Updated: " }} {{ $date | time.Format "2006-01-02" -}}]
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
