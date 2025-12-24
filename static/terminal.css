@@ -125,3 +125,36 @@
 .alert-caution .alert-title::before {
   content: "🔥";
 }
+
+.hover-popup {
+  position: relative;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 3px;
+  cursor: help;
+  transition: all 0.2s ease;
+}
+
+.hover-popup:hover {
+  color: var(--accent);
+}
+
+.hover-popup-img {
+  position: fixed;
+  max-width: 90vw;
+  max-height: 90vh;
+  border: 2px solid var(--accent);
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+  background-color: var(--background);
+  padding: 4px;
+}
+
+.hover-popup-img.show {
+  opacity: 1;
+}
