@@ -8,3 +8,120 @@
 .footer .copyright > *:not(:last-child) {
   margin-right: 10px;
 }
+
+/* Alert blocks (NOTE, TIP, IMPORTANT, WARNING, CAUTION) */
+.alert {
+  padding: 1rem 1rem 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid;
+  background-color: rgba(255, 255, 255, 0.02);
+  position: relative;
+}
+
+.alert-title {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95em;
+}
+
+.alert-title::before {
+  content: "";
+  font-size: 1.1em;
+}
+
+.alert-content {
+  padding-left: 0.25rem;
+}
+
+.alert-content p {
+  margin: 0.5rem 0;
+}
+
+.alert-content p:first-child {
+  margin-top: 0;
+}
+
+.alert-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Note - Cyan (terminal style) */
+.alert-note {
+  border-left-color: #5fb3b3;
+}
+
+.alert-note .alert-title {
+  color: #5fb3b3;
+}
+
+.alert-note .alert-title::before {
+  content: "ℹ️";
+}
+
+/* Tip - Green (muted terminal green) */
+.alert-tip {
+  border-left-color: #99c794;
+}
+
+.alert-tip .alert-title {
+  color: #99c794;
+}
+
+.alert-tip .alert-title::before {
+  content: "💡";
+}
+
+/* TL;DR - Green (same as tip) */
+.alert-tldr {
+  border-left-color: #99c794;
+}
+
+.alert-tldr .alert-title {
+  color: #99c794;
+}
+
+.alert-tldr .alert-title::before {
+  content: "💡";
+}
+
+/* Important - Gold (matches your accent) */
+.alert-important {
+  border-left-color: #d1b764;
+}
+
+.alert-important .alert-title {
+  color: #d1b764;
+}
+
+.alert-important .alert-title::before {
+  content: "❗";
+}
+
+/* Warning - Orange (muted) */
+.alert-warning {
+  border-left-color: #f99157;
+}
+
+.alert-warning .alert-title {
+  color: #f99157;
+}
+
+.alert-warning .alert-title::before {
+  content: "⚠️";
+}
+
+/* Caution - Red (muted terminal red) */
+.alert-caution {
+  border-left-color: #ec5f67;
+}
+
+.alert-caution .alert-title {
+  color: #ec5f67;
+}
+
+.alert-caution .alert-title::before {
+  content: "🔥";
+}
