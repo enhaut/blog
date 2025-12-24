@@ -9,6 +9,31 @@
   margin-right: 10px;
 }
 
+/* Center images with captions */
+.post-image {
+  display: block;
+  text-align: center;
+  margin: 2rem auto;
+  width: 100%;
+}
+
+.post-image img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  border: 2px solid var(--accent);
+  margin: 0;
+}
+
+.post-image figcaption {
+  margin-top: 0em;
+  font-size: 0.9em;
+  font-style: normal;
+  color: #999;
+  background: none;
+  background-color: transparent;
+}
+
 /* Alert blocks (NOTE, TIP, IMPORTANT, WARNING, CAUTION) */
 .alert {
   padding: 1rem 1rem 1rem 1.5rem;
@@ -158,3 +183,4 @@
 .hover-popup-img.show {
   opacity: 1;
 }
+
