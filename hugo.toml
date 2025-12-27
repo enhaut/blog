@@ -1,6 +1,6 @@
 baseURL = 'https://blog.dobron.sk'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = "Sam's Notes"
 theme = 'hugo-theme-terminal'
 
 pagination.pagerSize = 5
