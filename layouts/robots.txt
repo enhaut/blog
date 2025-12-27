@@ -1,10 +1,14 @@
+# Allow search engines and LLM search bots
+User-agent: *
+Allow: /
+
+# Block AI training bots (but allow LLM search)
 User-agent: AI2Bot
 User-agent: Ai2Bot-Dolma
 User-agent: aiHitBot
 User-agent: Amazonbot
 User-agent: Andibot
 User-agent: anthropic-ai
-User-agent: Applebot
 User-agent: Applebot-Extended
 User-agent: Awario
 User-agent: bedrockbot
@@ -12,7 +16,6 @@ User-agent: Brightbot 1.0
 User-agent: Bytespider
 User-agent: CCBot
 User-agent: ChatGPT-User
-User-agent: Claude-SearchBot
 User-agent: Claude-User
 User-agent: Claude-Web
 User-agent: ClaudeBot
@@ -54,7 +57,6 @@ User-agent: MistralAI-User/1.0
 User-agent: MyCentralAIScraperBot
 User-agent: netEstate Imprint Crawler
 User-agent: NovaAct
-User-agent: OAI-SearchBot
 User-agent: omgili
 User-agent: omgilibot
 User-agent: Operator
