@@ -1,0 +1,7 @@
+{{ $file := .Get 0 }}
+{{ $path := printf "static/%s" $file }}
+{{ if fileExists $path }}
+{{ readFile $path | safeHTML }}
+{{ else }}
+<!-- File not found: {{ $file }} -->
+{{ end }}
