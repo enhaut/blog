@@ -1,2 +1,12 @@
 {{- $isExternal := strings.HasPrefix .Destination "http" -}}
+{{- $text := .Text -}}
+{{- if and (strings.Contains $text "<figure") (strings.Contains $text "post-image") -}}
+  {{- $img := replaceRE `(?s).*?(<img[^>]*>).*` "$1" $text -}}
+  {{- $caption := replaceRE `(?s).*<figcaption>(.*?)</figcaption>.*` "$1" $text -}}
+  <figure class="post-image">
+    <a href="{{ .Destination | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $isExternal }} target="_blank" rel="noopener noreferrer"{{ end }}>{{- $img | safeHTML -}}</a>
+    {{ if $caption }}<figcaption>{{ $caption | safeHTML }}</figcaption>{{ end }}
+  </figure>
+{{- else -}}
 <a href="{{ .Destination | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $isExternal }} target="_blank" rel="noopener noreferrer"{{ end }}>{{- .Text | safeHTML -}}</a>
+{{- end -}}
